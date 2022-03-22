@@ -1,0 +1,38 @@
+/* Colors */
+$white: #fff;
+$black: #242424;
+$coax: #575757;
+$darkerGray: rgb(115, 115, 115);
+$gray: #9EAEBB;
+$lightGray: #F4F5F7;
+$darkBlue: #2e66b6;
+$darkerBlue: #1b2935;
+$blue: #2380cb;
+$darkGreen: #34b440;
+$green: #81cc28;
+$yellow: #fbbd09;
+$darkOrange: #da691b;
+$orange: #f68612;
+$red: #ef3420;
+
+
+/* Fonts */
+$montserrat: 'Montserrat', sans-serif;
+
+
+/* Blocks */
+$desktopHeaderHeight: 80px;
+$desktopFooterHeight: 150px;
+
+
+/* Transitions */
+$transition: .2s ease;
+
+
+/* Defaults */
+$mainColor: $coax;
+$defaultFontFamily: $montserrat;
+
+
+/* Responsive */
+$mobile: 850px;

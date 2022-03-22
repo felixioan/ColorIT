@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox prefHeight="680.0" prefWidth="1000" userData="Project info" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RequirementViewController">
+   <VBox prefHeight="659.0" prefWidth="501.0">
+      <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="450.0">
+         <Button mnemonicParsing="false" onAction="#openProject" text="⬅">
+            <HBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </HBox.margin>
+         </Button>
+
+         <Label fx:id="projectName" text="Project number 1">
+            <font>
+               <Font size="27.0" />
+            </font>
+            <HBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin>
+         </Label>
+      </HBox>
+      <Label text="Description:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ScrollPane maxHeight="100.0" prefHeight="40.0" prefWidth="397.0" VBox.vgrow="ALWAYS">
+         <Label fx:id="description" maxHeight="-Infinity" minHeight="30.0" prefWidth="475.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis arcu felis. Maecenas egestas euismod tellus, vitae consectetur ligula euismod auctor. Cras mi est, vulputate a ex eu, varius mattis ex. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc dignissim molestie ligula, varius placerat lacus egestas a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam sed elementum leo. Etiam vitae maximus magna. Donec quis pharetra massa.Aenean venenatis sed augue vitae volutpat. Nam consectetur ipsum et nunc cursus lobortis. Aenean ullamcorper consequat accumsan. Nullam vitae varius dolor, sed rhoncus dolor. " wrapText="true">
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+         </Label>
+      </ScrollPane>
+      <HBox prefHeight="30.0" prefWidth="434.0">
+         <Label prefHeight="26.0" prefWidth="115.0" text="Requirements">
+            <font>
+               <Font size="17.0" />
+            </font>
+            <HBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin>
+         </Label>
+         <ChoiceBox fx:id="cb" prefWidth="150.0">
+            <HBox.margin>
+               <Insets bottom="5.0" left="25.0" right="5.0" top="5.0" />
+            </HBox.margin>
+         </ChoiceBox>
+         <TextField fx:id="searchValue">
+            <HBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin>
+         </TextField>
+         <Button mnemonicParsing="false" onAction="#search" text="🔍">
+            <HBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </HBox.margin>
+         </Button>
+      </HBox>
+      <HBox prefHeight="379.0" prefWidth="490.0">
+         <TableView fx:id="requirementTable" prefHeight="379.0" prefWidth="444.0">
+            <columns>
+               <TableColumn fx:id="reqNameColumn" prefWidth="170.3999971151352" sortable="false" text="Name" />
+               <TableColumn fx:id="reqStatusColumn" editable="false" prefWidth="84.00004577636719" sortable="false" text="Status" />
+               <TableColumn fx:id="reqEstiTimeColumn" editable="false" prefWidth="92.800048828125" sortable="false" text="Estimated time" />
+               <TableColumn fx:id="reqUsedTimeColumn" editable="false" prefWidth="84.0" sortable="false" text="Used time" />
+            </columns>
+         </TableView>
+         <VBox alignment="CENTER" prefHeight="354.0" prefWidth="62.0">
+            <Button mnemonicParsing="false" onAction="#morePriority" text="⬆">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#lessPriority" text="⬇">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </VBox>
+      </HBox>
+      <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="22.0" prefWidth="438.0">
+         <Button mnemonicParsing="false" onAction="#addRequirement" text="Add requirement">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" top="10.0" />
+            </HBox.margin>
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#openRequirement" text="Open requirement">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" top="10.0" />
+            </HBox.margin>
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#editRequirement" text="Edit requirement">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" top="10.0" />
+            </HBox.margin>
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#deleteRequirement" text="Delete requirement">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" top="10.0" />
+            </HBox.margin>
+            <font>
+               <Font size="10.0" />
+            </font>
+         </Button>
+      </HBox>
+      <Label fx:id="errorLabel" text="errorLabel" textFill="RED" />
+   </VBox>
+   <VBox prefHeight="659.0" prefWidth="465.0">
+      <HBox.margin>
+         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+      </HBox.margin>
+      <HBox prefHeight="58.0" prefWidth="466.0">
+         <Button mnemonicParsing="false" onAction="#addTeamMember" text="Add">
+            <HBox.margin>
+               <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+            </HBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#deleteTeamMember" text="Delete">
+            <HBox.margin>
+               <Insets bottom="2.0" left="5.0" right="5.0" top="2.0" />
+            </HBox.margin>
+         </Button>
+         <ChoiceBox fx:id="chooseRoleBox" prefWidth="150.0">
+            <HBox.margin>
+               <Insets bottom="2.0" left="120.0" right="2.0" top="2.0" />
+            </HBox.margin>
+         </ChoiceBox>
+         <Button mnemonicParsing="false" onAction="#changeRole" text="Set role">
+            <HBox.margin>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </HBox.margin>
+         </Button>
+      </HBox>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
+         <TableView fx:id="projectTeamList" prefHeight="200.0" prefWidth="462.0">
+            <columns>
+               <TableColumn fx:id="nameColumn" prefWidth="236.8" text="Name" />
+               <TableColumn fx:id="roleColumn" prefWidth="207.20008850097656" text="Special role" />
+            </columns>
+         </TableView>
+      </ScrollPane>
+      <StackPane fx:id="stackPane" prefHeight="460.0" prefWidth="466.0">
+         <fx:include fx:id="requirementDetailsView" source="RequirementDetailsView.fxml" visible="false" />
+      </StackPane>
+   </VBox>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="460.0" prefWidth="466.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.RequirementDetailsViewController">
+   <children>
+      <ScrollPane prefHeight="467.0" prefWidth="466.0" VBox.vgrow="ALWAYS">
+         <content>
+            <VBox maxWidth="-Infinity" prefHeight="571.0" prefWidth="448.0">
+               <children>
+                  <Label fx:id="requirementName" text="Requirement name">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Label>
+                  <GridPane alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="115.0" prefWidth="370.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="227.4000244140625" minWidth="10.0" prefWidth="154.2000244140625" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.59998321533203" minWidth="10.0" prefWidth="279.7999755859375" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="ID: " />
+                        <Label fx:id="requirementID" text="1" GridPane.columnIndex="1" />
+                        <Label text="Responsible team member:" GridPane.rowIndex="1" />
+                        <Label fx:id="reasTeamMember" text="Peter" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Deadline:" GridPane.rowIndex="2" />
+                        <Label fx:id="deadline" text="1.1.2000" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Status:" GridPane.rowIndex="3" />
+                        <Label fx:id="status" text="Not started" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <Label text="Description:">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin></Label>
+                  <Label fx:id="description" minHeight="30.0" prefWidth="427.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec justo sed felis laoreet condimentum eget a nunc. Ut vitae felis sit amet neque maximus porttitor in laoreet risus. Praesent sodales vitae erat et posuere. Phasellus id lacus at purus ornare blandit. Phasellus aliquet tortor dolor, mattis tempus metus cursus ullamcorper. Pellentesque nec nisi lacus. Aliquam erat volutpat. Duis dapibus eget sapien et eleifend. Donec eleifend, nisl vitae mattis consectetur, nisi neque posuere sem, at semper est nunc nec magna. Aliquam et dolor lacus. Aenean sed fermentum lectus, sit amet mollis nunc. Proin elementum magna in mauris pellentesque, ac sodales ipsum sodales. Ut mi erat, pharetra ac ex et, gravida venenatis nunc. Nulla viverra elit vitae elit pellentesque, eget dignissim. " wrapText="true" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></Label>
+                  <ListView fx:id="taskList" prefHeight="206.0" prefWidth="427.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></ListView>
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="454.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#addTask" text="Add">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></Button>
+                        <Button mnemonicParsing="false" onAction="#openTask" text="Open">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></Button>
+                        <Button mnemonicParsing="false" onAction="#editTask" text="Edit">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></Button>
+                        <Button mnemonicParsing="false" onAction="#deleteTask" text="Delete">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin></Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>

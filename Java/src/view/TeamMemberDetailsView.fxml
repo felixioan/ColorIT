@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER_LEFT" prefHeight="476.0" prefWidth="592.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TeamMemberDetailsViewController">
+   <children>
+      <HBox prefHeight="42.0" prefWidth="600.0">
+         <children>
+            <Label text="Name:">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="teamMemberName" text="this is name of the team member">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="600.0">
+         <children>
+            <Label text="Email:">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="teamMemberEmail" text="this is email of team member">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="39.0" prefWidth="571.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Productivity:">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="teamMemberProductivity" maxWidth="300.0" prefHeight="20.0" prefWidth="58.0" text="number">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <Label text="(ratio of estimated and actual time spend on tasks, higher=better )">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="301.0" prefWidth="600.0">
+         <content>
+            <TableView fx:id="projectList" prefHeight="300.0" prefWidth="576.0">
+              <columns>
+                <TableColumn fx:id="projectName" prefWidth="289.599920630455" text="Project name" />
+                <TableColumn fx:id="memberRole" minWidth="0.0" prefWidth="277.6000671386719" text="Role" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="571.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#openProject" text="Open project">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#back" text="Go back">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

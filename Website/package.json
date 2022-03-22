@@ -1,0 +1,26 @@
+{
+  "name": "colourit",
+  "version": "1.0.0",
+  "description": "Colout IT",
+  "author": "JH",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "latest",
+    "eslint": "^7.15.0",
+    "eslint-loader": "^4.0.2",
+    "generate-avatar": "^1.4.6",
+    "moment": "^2.29.1",
+    "nuxt": "^2.14.3",
+    "vue-scrollto": "^2.20.0"
+  },
+  "devDependencies": {
+    "node-sass": "latest",
+    "sass-loader": "latest"
+  }
+}

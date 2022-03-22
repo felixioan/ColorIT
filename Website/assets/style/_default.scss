@@ -1,0 +1,61 @@
+html,
+body {
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+    //min-height: -webkit-fill-available;
+    padding: 0;
+    margin: 0;
+    outline: none !important;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    font-family: $defaultFontFamily;
+    font-weight: 400;
+    text-align: left;
+    color: $mainColor;
+    background: linear-gradient(to bottom, $lightGray $desktopHeaderHeight, $white 100%);
+    overflow: auto;
+    overflow: initial;
+}
+
+#nuxt-loading {
+    background: $lightGray;
+
+    & > div {
+        border-left-color: $orange;
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+a {
+    color: $black;
+    text-decoration: none !important;
+    outline: none;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: left;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: $black;
+}
+
+@media (min-width: $mobile+1) {
+    .mobileOnly {
+        display: none;
+    }
+}
+@media (max-width: $mobile) {
+    h1 {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}

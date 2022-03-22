@@ -1,0 +1,21 @@
+.defbtn {
+    display: block;
+    width: max-content;
+    height: auto;
+    background: $orange;
+    border-radius: 4px;
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .3px;
+    text-align: center;
+    border: none;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transition: $transition;
+    outline: none;
+    cursor: pointer;
+    &:hover,&.nuxt-link-exact-active {
+        background: $yellow;
+    }
+}

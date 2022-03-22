@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.AddTeamMemberToProjectViewController">
+    <HBox alignment="BOTTOM_LEFT" prefHeight="43.0" prefWidth="599.0" spacing="20.0">
+        <children>
+            <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#addTeamMember" text="Add">
+                <HBox.margin>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                </HBox.margin>
+            </Button>
+         <Button mnemonicParsing="false" onAction="#close" text="Close window">
+            <HBox.margin>
+               <Insets bottom="10.0" left="400.0" right="10.0" top="10.0" />
+            </HBox.margin>
+         </Button>
+        </children>
+    </HBox>
+    <TableView fx:id="teamMemberList" maxHeight="-Infinity" prefHeight="657.0" prefWidth="1000.0">
+        <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="299.199951171875" text="name" />
+            <TableColumn fx:id="emailColumn" minWidth="0.0" prefWidth="297.60003662109375" text="e-mail" />
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="680" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TeamMemberViewController">
+   <HBox alignment="BASELINE_CENTER" prefHeight="43.0" prefWidth="599.0" spacing="20.0">
+      <children>
+         <Button alignment="TOP_LEFT" mnemonicParsing="false" onAction="#addTeamMember" text="Add">
+            <HBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </HBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#getMoreInfo" text="Get more information">
+            <HBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </HBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#editTeamMember" text="Edit">
+            <HBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </HBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#deleteTeamMember" text="Delete">
+            <HBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+   </HBox>
+   <TableView fx:id="teamMemberList" maxHeight="-Infinity" prefHeight="657.0" prefWidth="1000.0">
+     <columns>
+       <TableColumn fx:id="nameColumn" prefWidth="490.0" text="Name" />
+       <TableColumn fx:id="emailColumn" minWidth="0.0" prefWidth="490.0" text="E-mail" />
+     </columns>
+   </TableView>
+
+</VBox>

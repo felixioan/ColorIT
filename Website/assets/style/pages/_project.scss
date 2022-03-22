@@ -1,0 +1,267 @@
+.projectPage {
+    width: 100%;
+    height: 100%;
+    
+    .container {
+        height: calc(100vh - #{$desktopFooterHeight});
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: max-content 1fr;
+        grid-gap: 20px;
+    }
+    .projectHeader {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, max-content) 1fr;
+        grid-template-rows: 100%;
+        grid-gap: 10px;
+        align-items: center;
+        padding-top: 30px;
+        box-sizing: border-box;
+        @media (max-width: $mobile) {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(3,max-content);
+            justify-items: center;
+            grid-gap: 1px;
+            padding-bottom: 10px;
+
+            h1 {
+                text-align: center;
+            }
+            .forCompany {
+                padding-top: 5px;
+            }
+        }
+
+        .returnBtn {
+            position: relative;
+            top: 1px;
+            display: flex;
+            width: max-content;
+            height: max-content;
+            align-items: center;
+            color: $darkerGray;
+            border: 1px solid transparent;
+            border-radius: 15px;
+            padding: 8px 15px;
+            transition: $transition;
+            cursor: pointer;
+            &:hover {
+                border-color: transparentize($color: $gray, $amount: 0.5);
+            }
+
+            i {
+                font-size: 16px;
+            }
+            span {
+                font-size: 10px;
+                text-align: left;
+                padding-left: 10px;
+                text-transform: uppercase;
+            }
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 32px;
+            font-weight: 400;
+            margin: 0;
+        }
+        .forCompany {
+            position: relative;
+            top: 1px;
+            font-size: 14px;
+            padding-left: 7px;
+            
+            .company {
+                font-weight: 600;
+            }
+        }
+    }
+    .tileContainer {
+        display: block;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 64px 64px 0 rgba(0,0,0,0.06), 0 32px 32px 0 rgba(0,0,0,0.03), 0 16px 16px 0 rgba(0,0,0,0.02), 0 4px 4px 0 rgba(0,0,0,0.02), 0 2px 2px 0 rgba(0,0,0,0.02);
+        border-radius: 10px;
+        padding: 30px;
+        box-sizing: border-box;
+        overflow: auto;
+        overflow-x: hidden;
+        /* @media (max-width: 768px) {
+            padding: 0;
+            box-shadow: none !important;
+        } */
+
+        .tileHeadline {
+            margin: 0;
+            color: $black;
+            font-size: 20px;
+            text-align: left;
+            margin-bottom: 20px;
+            &:not(:first-child) {
+                margin-top: 50px;
+            }
+
+            span {
+                display: inline-block;
+                font-weight: 600;
+                color: $darkerGray;
+                font-size: 13px;
+                padding-left: 10px;
+                transform: translateY(-2px);
+            }
+        }
+        .description {
+            font-size: 16px;
+            max-width: 700px;
+        }
+        .requirementsList {
+            $itemHeight: 32px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-auto-flow: row;
+            grid-auto-rows: $itemHeight;
+            grid-gap: 11px;
+            @media (max-width: $mobile) {
+                padding-top: 20px;
+                grid-auto-rows: max-content;
+                grid-gap: 35px;
+
+                .requirement {
+                    grid-template-columns: 100% !important;
+                    grid-template-rows: 32px max-content !important;
+                    grid-gap: 7px !important;
+
+                    .status {
+                        width: max-content !important;
+                        padding: 0 20px;
+                        min-width: 105px;
+                    }
+                    .requirementMain {
+                        white-space: initial !important;
+                        line-height: 20px !important;
+
+                        .date {
+                            display: block;
+                            padding-top: 7px;
+
+                            i {
+                                display: none;
+                            }
+                        }
+                        .functional {
+                            display: block;
+                            padding-top: 7px;
+
+                            i {
+                                padding-left: 0 !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .requirement {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 100px 1fr;
+                grid-template-rows: 100%;
+                grid-gap: 15px;
+                line-height: $itemHeight;
+                transition: $transition;
+                &[data-status="Not started"] {
+                    .status {
+                        border-color: transparentize($color: $gray, $amount: 0.8);
+                        color: transparentize($color: $gray, $amount: 0.3);
+                    }
+                }
+                &[data-status="Started"] {
+                    .status {
+                        border-color: transparentize($color: $gray, $amount: 0.1);
+                        color: $gray;
+                    }
+                }
+                &[data-status="Ended"], &[data-status="Approved"] {
+                    opacity: .6;
+
+                    .status {
+                        border-color: $darkGreen;
+                        color: $darkGreen;
+                    }
+                }
+                &[data-status="Rejected"] {
+                    opacity: .6;
+
+                    .status {
+                        border-color: $red;
+                        color: $red;
+                    }
+                }
+                &:hover {
+                    opacity: 1;
+                }
+
+                .status {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid;
+                    box-sizing: border-box;
+                    line-height: $itemHeight - 2;
+                    border-radius: 15px;
+                    text-align: center;
+                    font-size: 12px;
+                    font-weight: 500;
+                    cursor: default;
+                }
+                .requirementMain {
+                    color: $black;
+                    font-size: 16px;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    
+                    .date {
+                        font-size: 14px;
+                        color: $gray;
+                        &.late {
+                            color: lighten($color: $red, $amount: 5);
+                            font-weight: 500;
+                        }
+
+                        i {
+                            padding: 0 5px;
+                        }
+                    }
+                    .functional {
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: $gray;
+                        text-transform: uppercase;
+
+                        i {
+                            font-size: 10px;
+                            padding: 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: $mobile) {
+            .tileHeadline {
+                margin-bottom: 10px;
+                &:not(:first-child) {
+                    margin-top: 30px;
+                }
+                
+                span {
+                    display: block;
+                    padding-left: 0;
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+}

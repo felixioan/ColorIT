@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ManageRequirementsViewController">
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <HBox>
+      <children>
+         <Label prefHeight="29.0" prefWidth="71.0" text="Name:" />
+         <TextField fx:id="requirementName" prefHeight="26.0" prefWidth="509.0" />
+      </children>
+   </HBox>
+   <HBox alignment="BASELINE_LEFT">
+      <Label prefHeight="18.0" prefWidth="64.0" text="Description:">
+         <HBox.margin>
+            <Insets bottom="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+      </Label>
+      <ToggleButton mnemonicParsing="false" onAction="#functionalDesc" prefWidth="100.0" selected="true" text="Functional">
+         <toggleGroup>
+            <ToggleGroup fx:id="descriptionType" />
+         </toggleGroup>
+         <HBox.margin>
+            <Insets left="2.0" right="2.0" top="5.0" />
+         </HBox.margin>
+      </ToggleButton>
+      <Label text="or">
+         <HBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </HBox.margin>
+      </Label>
+      <ToggleButton mnemonicParsing="false" onAction="#onFunctionalDesc" prefWidth="109.0" text="Not functional" toggleGroup="$descriptionType">
+         <HBox.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="5.0" />
+         </HBox.margin></ToggleButton>
+   </HBox>
+   <StackPane fx:id="stackPaneDescription" prefHeight="150.0" prefWidth="200.0">
+      <TextArea fx:id="requirementDescription" prefHeight="93.0" prefWidth="600.0" promptText="Enter description here" wrapText="true">
+         <StackPane.margin>
+            <Insets top="5.0" />
+         </StackPane.margin></TextArea>
+      <GridPane visible="false">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.5999755859375" minWidth="10.0" prefWidth="103.59996795654297" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="486.00000762939453" minWidth="10.0" prefWidth="476.40003204345703" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <Label text="who:" />
+         <Label text="what:" GridPane.rowIndex="1" />
+         <Label text="why:" GridPane.rowIndex="2" />
+         <TextField fx:id="who" GridPane.columnIndex="1" />
+         <TextField fx:id="what" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <TextField fx:id="why" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      </GridPane>
+   </StackPane>
+   <Label fx:id="actualDeadline" text="Deadline">
+      <VBox.margin>
+         <Insets left="5.0" right="5.0" top="5.0" />
+      </VBox.margin>
+   </Label>
+   <DatePicker fx:id="requirementDeadline">
+      <VBox.margin>
+         <Insets bottom="5.0" />
+      </VBox.margin>
+   </DatePicker>
+   <Label fx:id="actualRespTeamMem" text="Responsible team member" />
+   <ChoiceBox fx:id="RequirementResponsibleMember" minWidth="158.0" prefHeight="26.0">
+      <VBox.margin>
+         <Insets bottom="5.0" />
+      </VBox.margin>
+   </ChoiceBox>
+   <VBox fx:id="statusBox" prefHeight="78.0" prefWidth="579.0">
+      <Label fx:id="actualStatus" alignment="CENTER_RIGHT" text="Status" />
+      <ChoiceBox fx:id="statusChoiceBox" minWidth="158.0" prefHeight="26.0" />
+   </VBox>
+   <HBox alignment="BOTTOM_LEFT" prefHeight="65.0" prefWidth="579.0">
+      <Button mnemonicParsing="false" onAction="#confirm" prefWidth="54.0" text="OK">
+         <HBox.margin>
+            <Insets right="5.0" top="5.0" />
+         </HBox.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#openRequirementView" prefWidth="54.0" text="Cancel">
+         <HBox.margin>
+            <Insets right="5.0" top="5.0" />
+         </HBox.margin>
+      </Button>
+   </HBox>
+</VBox>

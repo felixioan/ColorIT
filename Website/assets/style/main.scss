@@ -1,0 +1,25 @@
+// Core
+@import "./variables.scss";
+@import "./default.scss";
+@import "./transitions.scss";
+@import "./fonts.scss";
+
+
+//Layouts
+@import "./layouts/default.scss";
+
+
+//Blocks
+@import "./blocks/header.scss";
+@import "./blocks/footer.scss";
+
+
+//Components
+@import "./components/defbtn.scss";
+
+//Pages
+@import "./pages/index.scss";
+@import "./pages/about.scss";
+@import "./pages/project.scss";
+@import "./pages/projects.scss";
+@import "./pages/team.scss";
